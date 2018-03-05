@@ -1,0 +1,574 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F533CB4F204DD32400E565B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F533CB4E204DD32400E565B8 /* AppDelegate.swift */; };
+		F533CB51204DD32400E565B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F533CB50204DD32400E565B8 /* ViewController.swift */; };
+		F533CB54204DD32400E565B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F533CB52204DD32400E565B8 /* Main.storyboard */; };
+		F533CB57204DD32400E565B8 /* Payrr.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F533CB55204DD32400E565B8 /* Payrr.xcdatamodeld */; };
+		F533CB59204DD32400E565B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F533CB58204DD32400E565B8 /* Assets.xcassets */; };
+		F533CB5C204DD32400E565B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F533CB5A204DD32400E565B8 /* LaunchScreen.storyboard */; };
+		F533CB67204DD32400E565B8 /* PayrrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F533CB66204DD32400E565B8 /* PayrrTests.swift */; };
+		F533CB72204DD32400E565B8 /* PayrrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F533CB71204DD32400E565B8 /* PayrrUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F533CB63204DD32400E565B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F533CB43204DD32400E565B8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F533CB4A204DD32400E565B8;
+			remoteInfo = Payrr;
+		};
+		F533CB6E204DD32400E565B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F533CB43204DD32400E565B8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F533CB4A204DD32400E565B8;
+			remoteInfo = Payrr;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F533CB4B204DD32400E565B8 /* Payrr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Payrr.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F533CB4E204DD32400E565B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F533CB50204DD32400E565B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F533CB53204DD32400E565B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F533CB56204DD32400E565B8 /* Payrr.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Payrr.xcdatamodel; sourceTree = "<group>"; };
+		F533CB58204DD32400E565B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F533CB5B204DD32400E565B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F533CB5D204DD32400E565B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F533CB62204DD32400E565B8 /* PayrrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PayrrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F533CB66204DD32400E565B8 /* PayrrTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayrrTests.swift; sourceTree = "<group>"; };
+		F533CB68204DD32400E565B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F533CB6D204DD32400E565B8 /* PayrrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PayrrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F533CB71204DD32400E565B8 /* PayrrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayrrUITests.swift; sourceTree = "<group>"; };
+		F533CB73204DD32400E565B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F533CB48204DD32400E565B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F533CB5F204DD32400E565B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F533CB6A204DD32400E565B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F533CB42204DD32400E565B8 = {
+			isa = PBXGroup;
+			children = (
+				F533CB4D204DD32400E565B8 /* Payrr */,
+				F533CB65204DD32400E565B8 /* PayrrTests */,
+				F533CB70204DD32400E565B8 /* PayrrUITests */,
+				F533CB4C204DD32400E565B8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F533CB4C204DD32400E565B8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F533CB4B204DD32400E565B8 /* Payrr.app */,
+				F533CB62204DD32400E565B8 /* PayrrTests.xctest */,
+				F533CB6D204DD32400E565B8 /* PayrrUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F533CB4D204DD32400E565B8 /* Payrr */ = {
+			isa = PBXGroup;
+			children = (
+				F533CB4E204DD32400E565B8 /* AppDelegate.swift */,
+				F533CB50204DD32400E565B8 /* ViewController.swift */,
+				F533CB52204DD32400E565B8 /* Main.storyboard */,
+				F533CB58204DD32400E565B8 /* Assets.xcassets */,
+				F533CB5A204DD32400E565B8 /* LaunchScreen.storyboard */,
+				F533CB5D204DD32400E565B8 /* Info.plist */,
+				F533CB55204DD32400E565B8 /* Payrr.xcdatamodeld */,
+			);
+			path = Payrr;
+			sourceTree = "<group>";
+		};
+		F533CB65204DD32400E565B8 /* PayrrTests */ = {
+			isa = PBXGroup;
+			children = (
+				F533CB66204DD32400E565B8 /* PayrrTests.swift */,
+				F533CB68204DD32400E565B8 /* Info.plist */,
+			);
+			path = PayrrTests;
+			sourceTree = "<group>";
+		};
+		F533CB70204DD32400E565B8 /* PayrrUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F533CB71204DD32400E565B8 /* PayrrUITests.swift */,
+				F533CB73204DD32400E565B8 /* Info.plist */,
+			);
+			path = PayrrUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F533CB4A204DD32400E565B8 /* Payrr */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F533CB76204DD32400E565B8 /* Build configuration list for PBXNativeTarget "Payrr" */;
+			buildPhases = (
+				F533CB47204DD32400E565B8 /* Sources */,
+				F533CB48204DD32400E565B8 /* Frameworks */,
+				F533CB49204DD32400E565B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Payrr;
+			productName = Payrr;
+			productReference = F533CB4B204DD32400E565B8 /* Payrr.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F533CB61204DD32400E565B8 /* PayrrTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F533CB79204DD32400E565B8 /* Build configuration list for PBXNativeTarget "PayrrTests" */;
+			buildPhases = (
+				F533CB5E204DD32400E565B8 /* Sources */,
+				F533CB5F204DD32400E565B8 /* Frameworks */,
+				F533CB60204DD32400E565B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F533CB64204DD32400E565B8 /* PBXTargetDependency */,
+			);
+			name = PayrrTests;
+			productName = PayrrTests;
+			productReference = F533CB62204DD32400E565B8 /* PayrrTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F533CB6C204DD32400E565B8 /* PayrrUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F533CB7C204DD32400E565B8 /* Build configuration list for PBXNativeTarget "PayrrUITests" */;
+			buildPhases = (
+				F533CB69204DD32400E565B8 /* Sources */,
+				F533CB6A204DD32400E565B8 /* Frameworks */,
+				F533CB6B204DD32400E565B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F533CB6F204DD32400E565B8 /* PBXTargetDependency */,
+			);
+			name = PayrrUITests;
+			productName = PayrrUITests;
+			productReference = F533CB6D204DD32400E565B8 /* PayrrUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F533CB43204DD32400E565B8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Aaron Speakman";
+				TargetAttributes = {
+					F533CB4A204DD32400E565B8 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					F533CB61204DD32400E565B8 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F533CB4A204DD32400E565B8;
+					};
+					F533CB6C204DD32400E565B8 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F533CB4A204DD32400E565B8;
+					};
+				};
+			};
+			buildConfigurationList = F533CB46204DD32400E565B8 /* Build configuration list for PBXProject "Payrr" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F533CB42204DD32400E565B8;
+			productRefGroup = F533CB4C204DD32400E565B8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F533CB4A204DD32400E565B8 /* Payrr */,
+				F533CB61204DD32400E565B8 /* PayrrTests */,
+				F533CB6C204DD32400E565B8 /* PayrrUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F533CB49204DD32400E565B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F533CB5C204DD32400E565B8 /* LaunchScreen.storyboard in Resources */,
+				F533CB59204DD32400E565B8 /* Assets.xcassets in Resources */,
+				F533CB54204DD32400E565B8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F533CB60204DD32400E565B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F533CB6B204DD32400E565B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F533CB47204DD32400E565B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F533CB57204DD32400E565B8 /* Payrr.xcdatamodeld in Sources */,
+				F533CB51204DD32400E565B8 /* ViewController.swift in Sources */,
+				F533CB4F204DD32400E565B8 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F533CB5E204DD32400E565B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F533CB67204DD32400E565B8 /* PayrrTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F533CB69204DD32400E565B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F533CB72204DD32400E565B8 /* PayrrUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F533CB64204DD32400E565B8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F533CB4A204DD32400E565B8 /* Payrr */;
+			targetProxy = F533CB63204DD32400E565B8 /* PBXContainerItemProxy */;
+		};
+		F533CB6F204DD32400E565B8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F533CB4A204DD32400E565B8 /* Payrr */;
+			targetProxy = F533CB6E204DD32400E565B8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F533CB52204DD32400E565B8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F533CB53204DD32400E565B8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F533CB5A204DD32400E565B8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F533CB5B204DD32400E565B8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F533CB74204DD32400E565B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F533CB75204DD32400E565B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F533CB77204DD32400E565B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Payrr/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = COS420.Payrr;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F533CB78204DD32400E565B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Payrr/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = COS420.Payrr;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F533CB7A204DD32400E565B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PayrrTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = COS420.PayrrTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Payrr.app/Payrr";
+			};
+			name = Debug;
+		};
+		F533CB7B204DD32400E565B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PayrrTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = COS420.PayrrTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Payrr.app/Payrr";
+			};
+			name = Release;
+		};
+		F533CB7D204DD32400E565B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PayrrUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = COS420.PayrrUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Payrr;
+			};
+			name = Debug;
+		};
+		F533CB7E204DD32400E565B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PayrrUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = COS420.PayrrUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Payrr;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F533CB46204DD32400E565B8 /* Build configuration list for PBXProject "Payrr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F533CB74204DD32400E565B8 /* Debug */,
+				F533CB75204DD32400E565B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F533CB76204DD32400E565B8 /* Build configuration list for PBXNativeTarget "Payrr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F533CB77204DD32400E565B8 /* Debug */,
+				F533CB78204DD32400E565B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F533CB79204DD32400E565B8 /* Build configuration list for PBXNativeTarget "PayrrTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F533CB7A204DD32400E565B8 /* Debug */,
+				F533CB7B204DD32400E565B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F533CB7C204DD32400E565B8 /* Build configuration list for PBXNativeTarget "PayrrUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F533CB7D204DD32400E565B8 /* Debug */,
+				F533CB7E204DD32400E565B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F533CB55204DD32400E565B8 /* Payrr.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F533CB56204DD32400E565B8 /* Payrr.xcdatamodel */,
+			);
+			currentVersion = F533CB56204DD32400E565B8 /* Payrr.xcdatamodel */;
+			path = Payrr.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F533CB43204DD32400E565B8 /* Project object */;
+}
