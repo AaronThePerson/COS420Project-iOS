@@ -6,8 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Baseline standard spacing" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -187,7 +185,7 @@
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <items>
                                 <barButtonItem style="plain" systemItem="flexibleSpace" id="5mo-8k-iyj"/>
-                                <barButtonItem title="Delete Shift" systemItem="trash" id="jKx-ST-fvR"/>
+                                <barButtonItem systemItem="trash" id="jKx-ST-fvR"/>
                                 <barButtonItem style="plain" systemItem="flexibleSpace" id="CYd-Xq-0wr"/>
                                 <barButtonItem title="Submit" id="VJM-Wo-MDJ">
                                     <connections>
@@ -264,7 +262,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                         </textField>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -292,11 +290,10 @@
                                 <rect key="frame" x="30" y="120" width="315" height="427"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </scrollView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="SB9-Mw-6RV">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="SB9-Mw-6RV">
                                 <rect key="frame" x="92" y="575" width="190" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RkN-aP-UBj">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RkN-aP-UBj">
                                         <rect key="frame" x="0.0" y="0.0" width="75" height="34"/>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -305,11 +302,11 @@
                                             <segue destination="FGg-fj-Nq2" kind="show" id="lrp-uR-TWP"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="96m-93-VuL">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="96m-93-VuL">
                                         <rect key="frame" x="115" y="0.0" width="75" height="34"/>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="75" id="k3Y-8x-FPs"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="k3Y-8x-FPs"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="Accept"/>
@@ -319,7 +316,7 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Review Hours" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zb8-8P-DXG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review Hours" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zb8-8P-DXG">
                                 <rect key="frame" x="64" y="76" width="247" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -328,12 +325,16 @@
                         </subviews>
                         <color key="backgroundColor" red="0.58253391730000004" green="0.80745574620000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="zb8-8P-DXG" firstAttribute="leading" secondItem="cx9-m0-jd4" secondAttribute="leading" constant="64" id="1FV-eP-zfn"/>
+                            <constraint firstItem="zb8-8P-DXG" firstAttribute="top" secondItem="cx9-m0-jd4" secondAttribute="top" constant="56" id="7FV-8c-TLt"/>
                             <constraint firstItem="VYF-Pa-ToG" firstAttribute="centerX" secondItem="wub-fF-OZ5" secondAttribute="centerX" id="B6D-w9-DA4"/>
+                            <constraint firstItem="VYF-Pa-ToG" firstAttribute="top" secondItem="zb8-8P-DXG" secondAttribute="bottom" constant="8" symbolic="YES" id="BGp-4V-gr1"/>
                             <constraint firstItem="cx9-m0-jd4" firstAttribute="trailing" secondItem="VYF-Pa-ToG" secondAttribute="trailing" constant="30" id="D6j-jQ-Hrj"/>
                             <constraint firstItem="VYF-Pa-ToG" firstAttribute="leading" secondItem="cx9-m0-jd4" secondAttribute="leading" constant="30" id="Edu-eZ-dh1"/>
-                            <constraint firstItem="zb8-8P-DXG" firstAttribute="centerX" secondItem="VYF-Pa-ToG" secondAttribute="centerX" id="JhO-01-nbm"/>
+                            <constraint firstItem="SB9-Mw-6RV" firstAttribute="top" secondItem="VYF-Pa-ToG" secondAttribute="bottom" constant="28" id="KfW-F2-if5"/>
+                            <constraint firstItem="SB9-Mw-6RV" firstAttribute="centerX" secondItem="wub-fF-OZ5" secondAttribute="centerX" id="NQP-yT-AY6"/>
+                            <constraint firstItem="zb8-8P-DXG" firstAttribute="centerX" secondItem="VYF-Pa-ToG" secondAttribute="centerX" id="aZ3-Ye-bHh"/>
                             <constraint firstItem="VYF-Pa-ToG" firstAttribute="top" secondItem="cx9-m0-jd4" secondAttribute="top" constant="100" id="gBh-o4-H3G"/>
-                            <constraint firstItem="VYF-Pa-ToG" firstAttribute="firstBaseline" secondItem="zb8-8P-DXG" secondAttribute="baseline" constant="25.5" symbolType="layoutAnchor" id="jds-yj-qpd"/>
                             <constraint firstItem="VYF-Pa-ToG" firstAttribute="centerY" secondItem="wub-fF-OZ5" secondAttribute="centerY" id="ofF-Ka-5Kg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cx9-m0-jd4"/>
