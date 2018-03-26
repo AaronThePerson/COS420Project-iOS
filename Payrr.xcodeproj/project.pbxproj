@@ -7,14 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F527E42D20697777007E4AF3 /* HourEntryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F527E42C20697777007E4AF3 /* HourEntryTableViewController.swift */; };
+		F527E42F20697798007E4AF3 /* HourEntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F527E42E20697798007E4AF3 /* HourEntryTableViewCell.swift */; };
 		F533CB4F204DD32400E565B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F533CB4E204DD32400E565B8 /* AppDelegate.swift */; };
-		F533CB51204DD32400E565B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F533CB50204DD32400E565B8 /* ViewController.swift */; };
+		F533CB51204DD32400E565B8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F533CB50204DD32400E565B8 /* LoginViewController.swift */; };
 		F533CB54204DD32400E565B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F533CB52204DD32400E565B8 /* Main.storyboard */; };
 		F533CB57204DD32400E565B8 /* Payrr.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F533CB55204DD32400E565B8 /* Payrr.xcdatamodeld */; };
 		F533CB59204DD32400E565B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F533CB58204DD32400E565B8 /* Assets.xcassets */; };
 		F533CB5C204DD32400E565B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F533CB5A204DD32400E565B8 /* LaunchScreen.storyboard */; };
 		F533CB67204DD32400E565B8 /* PayrrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F533CB66204DD32400E565B8 /* PayrrTests.swift */; };
 		F533CB72204DD32400E565B8 /* PayrrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F533CB71204DD32400E565B8 /* PayrrUITests.swift */; };
+		F533CB88204DDBFE00E565B8 /* SendPayrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F533CB87204DDBFE00E565B8 /* SendPayrollViewController.swift */; };
+		F57473F0206025CC00ED0292 /* EmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57473EF206025CC00ED0292 /* EmployeeTableViewCell.swift */; };
+		F57473F220602AED00ED0292 /* EmployeesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57473F120602AED00ED0292 /* EmployeesTableViewController.swift */; };
+		F57473F420602C4200ED0292 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57473F320602C4200ED0292 /* Employee.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F527E42C20697777007E4AF3 /* HourEntryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourEntryTableViewController.swift; sourceTree = "<group>"; };
+		F527E42E20697798007E4AF3 /* HourEntryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourEntryTableViewCell.swift; sourceTree = "<group>"; };
 		F533CB4B204DD32400E565B8 /* Payrr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Payrr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F533CB4E204DD32400E565B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F533CB50204DD32400E565B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F533CB50204DD32400E565B8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F533CB53204DD32400E565B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F533CB56204DD32400E565B8 /* Payrr.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Payrr.xcdatamodel; sourceTree = "<group>"; };
 		F533CB58204DD32400E565B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +57,10 @@
 		F533CB6D204DD32400E565B8 /* PayrrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PayrrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F533CB71204DD32400E565B8 /* PayrrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayrrUITests.swift; sourceTree = "<group>"; };
 		F533CB73204DD32400E565B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F533CB87204DDBFE00E565B8 /* SendPayrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendPayrollViewController.swift; sourceTree = "<group>"; };
+		F57473EF206025CC00ED0292 /* EmployeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewCell.swift; sourceTree = "<group>"; };
+		F57473F120602AED00ED0292 /* EmployeesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesTableViewController.swift; sourceTree = "<group>"; };
+		F57473F320602C4200ED0292 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +112,14 @@
 			isa = PBXGroup;
 			children = (
 				F533CB4E204DD32400E565B8 /* AppDelegate.swift */,
-				F533CB50204DD32400E565B8 /* ViewController.swift */,
+				F527E42C20697777007E4AF3 /* HourEntryTableViewController.swift */,
+				F527E42E20697798007E4AF3 /* HourEntryTableViewCell.swift */,
+				F533CB50204DD32400E565B8 /* LoginViewController.swift */,
+				F533CB87204DDBFE00E565B8 /* SendPayrollViewController.swift */,
 				F533CB52204DD32400E565B8 /* Main.storyboard */,
+				F57473F120602AED00ED0292 /* EmployeesTableViewController.swift */,
+				F57473F320602C4200ED0292 /* Employee.swift */,
+				F57473EF206025CC00ED0292 /* EmployeeTableViewCell.swift */,
 				F533CB58204DD32400E565B8 /* Assets.xcassets */,
 				F533CB5A204DD32400E565B8 /* LaunchScreen.storyboard */,
 				F533CB5D204DD32400E565B8 /* Info.plist */,
@@ -262,9 +280,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F527E42D20697777007E4AF3 /* HourEntryTableViewController.swift in Sources */,
+				F57473F420602C4200ED0292 /* Employee.swift in Sources */,
+				F527E42F20697798007E4AF3 /* HourEntryTableViewCell.swift in Sources */,
+				F57473F0206025CC00ED0292 /* EmployeeTableViewCell.swift in Sources */,
+				F57473F220602AED00ED0292 /* EmployeesTableViewController.swift in Sources */,
 				F533CB57204DD32400E565B8 /* Payrr.xcdatamodeld in Sources */,
-				F533CB51204DD32400E565B8 /* ViewController.swift in Sources */,
+				F533CB51204DD32400E565B8 /* LoginViewController.swift in Sources */,
 				F533CB4F204DD32400E565B8 /* AppDelegate.swift in Sources */,
+				F533CB88204DDBFE00E565B8 /* SendPayrollViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
