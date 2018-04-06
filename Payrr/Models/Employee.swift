@@ -9,16 +9,19 @@
 import UIKit
 import Foundation
 
-class Employee{
+class Employee: NSObject{
     
-    var name: String
-    var id: String
- 
-    init?(name: String, id: String){
+    var name: String?
+    var id: String?
+    var jobs: [Job]?
+    
+    init?(name: String, id: String, jobs: [Job]) {
         self.name = name
         self.id = id
+        self.jobs = jobs
     }
     
 }
+
 
 
