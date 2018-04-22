@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09E9B28587D54642A28E2087 /* Pods_PayrrUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82718349A3AD6E7DD7FAB6CE /* Pods_PayrrUITests.framework */; };
+		0D3780A233E92FED41E836BA /* Pods_Payrr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70AAFA193B539A0F988592E5 /* Pods_Payrr.framework */; };
+		B737E18C4AB3845D14E27408 /* Pods_PayrrTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C895F925FCACB5F9B6AE3BB3 /* Pods_PayrrTests.framework */; };
 		F527E42F20697798007E4AF3 /* HourEntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F527E42E20697798007E4AF3 /* HourEntryTableViewCell.swift */; };
 		F533CB4F204DD32400E565B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F533CB4E204DD32400E565B8 /* AppDelegate.swift */; };
 		F533CB51204DD32400E565B8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F533CB50204DD32400E565B8 /* LoginViewController.swift */; };
@@ -43,6 +46,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08C33A45D32BCBFD8346B217 /* Pods-Payrr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Payrr.release.xcconfig"; path = "Pods/Target Support Files/Pods-Payrr/Pods-Payrr.release.xcconfig"; sourceTree = "<group>"; };
+		70AAFA193B539A0F988592E5 /* Pods_Payrr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Payrr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		82718349A3AD6E7DD7FAB6CE /* Pods_PayrrUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PayrrUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AEDD7CBB33C1DCED23D4C4E /* Pods-PayrrTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PayrrTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PayrrTests/Pods-PayrrTests.release.xcconfig"; sourceTree = "<group>"; };
+		B86DF4F132C06E4C78926CD6 /* Pods-PayrrTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PayrrTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PayrrTests/Pods-PayrrTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C895F925FCACB5F9B6AE3BB3 /* Pods_PayrrTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PayrrTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E494DCB7F90F4681377D3140 /* Pods-Payrr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Payrr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Payrr/Pods-Payrr.debug.xcconfig"; sourceTree = "<group>"; };
 		F527E42E20697798007E4AF3 /* HourEntryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourEntryTableViewCell.swift; sourceTree = "<group>"; };
 		F533CB4B204DD32400E565B8 /* Payrr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Payrr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F533CB4E204DD32400E565B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +75,8 @@
 		F57473EF206025CC00ED0292 /* EmployeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewCell.swift; sourceTree = "<group>"; };
 		F57473F120602AED00ED0292 /* EmployeesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesTableViewController.swift; sourceTree = "<group>"; };
 		F57473F320602C4200ED0292 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		F58DF6471AF9800AB844BB46 /* Pods-PayrrUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PayrrUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PayrrUITests/Pods-PayrrUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F7009D8BB4C343A66969257E /* Pods-PayrrUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PayrrUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PayrrUITests/Pods-PayrrUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D3780A233E92FED41E836BA /* Pods_Payrr.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B737E18C4AB3845D14E27408 /* Pods_PayrrTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,12 +100,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09E9B28587D54642A28E2087 /* Pods_PayrrUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		310EA8AFD372438796CE7E42 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E494DCB7F90F4681377D3140 /* Pods-Payrr.debug.xcconfig */,
+				08C33A45D32BCBFD8346B217 /* Pods-Payrr.release.xcconfig */,
+				B86DF4F132C06E4C78926CD6 /* Pods-PayrrTests.debug.xcconfig */,
+				9AEDD7CBB33C1DCED23D4C4E /* Pods-PayrrTests.release.xcconfig */,
+				F58DF6471AF9800AB844BB46 /* Pods-PayrrUITests.debug.xcconfig */,
+				F7009D8BB4C343A66969257E /* Pods-PayrrUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7428E3070BCCD3445E0F50DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				70AAFA193B539A0F988592E5 /* Pods_Payrr.framework */,
+				C895F925FCACB5F9B6AE3BB3 /* Pods_PayrrTests.framework */,
+				82718349A3AD6E7DD7FAB6CE /* Pods_PayrrUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F533CB42204DD32400E565B8 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +137,8 @@
 				F533CB65204DD32400E565B8 /* PayrrTests */,
 				F533CB70204DD32400E565B8 /* PayrrUITests */,
 				F533CB4C204DD32400E565B8 /* Products */,
+				310EA8AFD372438796CE7E42 /* Pods */,
+				7428E3070BCCD3445E0F50DB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -175,9 +215,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F533CB76204DD32400E565B8 /* Build configuration list for PBXNativeTarget "Payrr" */;
 			buildPhases = (
+				F57AEEECB1C058670BF85E70 /* [CP] Check Pods Manifest.lock */,
 				F533CB47204DD32400E565B8 /* Sources */,
 				F533CB48204DD32400E565B8 /* Frameworks */,
 				F533CB49204DD32400E565B8 /* Resources */,
+				1DEB40504DD3CF5EA921B300 /* [CP] Embed Pods Frameworks */,
+				A787FA4B7702B8BBF8AA6E34 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -192,9 +235,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F533CB79204DD32400E565B8 /* Build configuration list for PBXNativeTarget "PayrrTests" */;
 			buildPhases = (
+				B9ABACA043B005E06D045CDB /* [CP] Check Pods Manifest.lock */,
 				F533CB5E204DD32400E565B8 /* Sources */,
 				F533CB5F204DD32400E565B8 /* Frameworks */,
 				F533CB60204DD32400E565B8 /* Resources */,
+				59C7EDE0BB63BBAC04675C3D /* [CP] Embed Pods Frameworks */,
+				98A4EB6C33CF5F6771704DF1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -210,9 +256,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F533CB7C204DD32400E565B8 /* Build configuration list for PBXNativeTarget "PayrrUITests" */;
 			buildPhases = (
+				9CD8BD2B70570143A89FD9B9 /* [CP] Check Pods Manifest.lock */,
 				F533CB69204DD32400E565B8 /* Sources */,
 				F533CB6A204DD32400E565B8 /* Frameworks */,
 				F533CB6B204DD32400E565B8 /* Resources */,
+				DD0F36632B870E36D551EB7F /* [CP] Embed Pods Frameworks */,
+				26FB970A5E6CC9C243359739 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -296,6 +345,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1DEB40504DD3CF5EA921B300 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Payrr/Pods-Payrr-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		26FB970A5E6CC9C243359739 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PayrrUITests/Pods-PayrrUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		59C7EDE0BB63BBAC04675C3D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PayrrTests/Pods-PayrrTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98A4EB6C33CF5F6771704DF1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PayrrTests/Pods-PayrrTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9CD8BD2B70570143A89FD9B9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A787FA4B7702B8BBF8AA6E34 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Payrr/Pods-Payrr-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9ABACA043B005E06D045CDB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DD0F36632B870E36D551EB7F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PayrrUITests/Pods-PayrrUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F57AEEECB1C058670BF85E70 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F533CB47204DD32400E565B8 /* Sources */ = {
@@ -480,6 +667,7 @@
 		};
 		F533CB77204DD32400E565B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E494DCB7F90F4681377D3140 /* Pods-Payrr.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -496,6 +684,7 @@
 		};
 		F533CB78204DD32400E565B8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08C33A45D32BCBFD8346B217 /* Pods-Payrr.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -512,6 +701,7 @@
 		};
 		F533CB7A204DD32400E565B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B86DF4F132C06E4C78926CD6 /* Pods-PayrrTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -528,6 +718,7 @@
 		};
 		F533CB7B204DD32400E565B8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AEDD7CBB33C1DCED23D4C4E /* Pods-PayrrTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -544,6 +735,7 @@
 		};
 		F533CB7D204DD32400E565B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F58DF6471AF9800AB844BB46 /* Pods-PayrrUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -559,6 +751,7 @@
 		};
 		F533CB7E204DD32400E565B8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7009D8BB4C343A66969257E /* Pods-PayrrUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

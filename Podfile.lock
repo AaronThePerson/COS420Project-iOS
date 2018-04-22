@@ -1,0 +1,12 @@
+PODS:
+  - TRCurrencyTextField (0.1.1)
+
+DEPENDENCIES:
+  - TRCurrencyTextField
+
+SPEC CHECKSUMS:
+  TRCurrencyTextField: a942d5bd9cffc3fcf0fa2661e712adc1404df97b
+
+PODFILE CHECKSUM: a01a20a666814bfd8573c4974c7b4495e0751a5c
+
+COCOAPODS: 1.2.0
