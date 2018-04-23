@@ -80,6 +80,7 @@ class HourEntryViewController: UIViewController, UITableViewDelegate, UITableVie
         
         dateEndPicker.datePickerMode = .dateAndTime
         dateEndPicker.addTarget(self, action: #selector(HourEntryViewController.collectDateEnd(picker:)), for: UIControlEvents.valueChanged)
+        dateEndPicker.maximumDate = Date()
         endTimeField.inputView = dateEndPicker
         endTimeField.inputAccessoryView = toolbar2
     }
@@ -92,7 +93,7 @@ class HourEntryViewController: UIViewController, UITableViewDelegate, UITableVie
         toolbar.isTranslucent = true
         toolbar.sizeToFit()
         
-        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.plain, target: self, action: #selector(HourEntryViewController.dismissJobPicker))
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.plain, target: self, action:  #selector(HourEntryViewController.dismissJobPicker))
         
         toolbar.setItems([doneButton], animated: false)
         
@@ -106,6 +107,13 @@ class HourEntryViewController: UIViewController, UITableViewDelegate, UITableVie
         }
         else if shifts.count < 1{
             submitButton.isEnabled = false
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToReview"{
+            let sendPayrollController = segue.destination as! SendPayrollViewController
+            sendPayrollController.shiftsToAdd = shifts
         }
     }
     
@@ -132,9 +140,9 @@ class HourEntryViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     @objc func dismissJobPicker(){
-        selectJobField.text = employee?.jobs![jobPicker.selectedRow(inComponent: 0)].jobName
-        selectJobField.resignFirstResponder()
         selectedJob = employee?.jobs![jobPicker.selectedRow(inComponent: 0)]
+        selectJobField.text = selectedJob?.jobName
+        selectJobField.resignFirstResponder()
     }
     
     @objc func dismissStartPicker(){
@@ -172,7 +180,7 @@ class HourEntryViewController: UIViewController, UITableViewDelegate, UITableVie
             entryType = false
         }
         
-        let newshift = Shift(jobTitle: (selectedJob?.jobName)!, entryType: entryType)
+        let newshift = Shift(job: selectedJob!, entryType: entryType)
         
         if entryType{
             newshift.startTime = dateStartPicker.date
@@ -182,15 +190,8 @@ class HourEntryViewController: UIViewController, UITableViewDelegate, UITableVie
             formatter.dateStyle = DateFormatter.Style.medium
             formatter.timeStyle = DateFormatter.Style.short
             
-            newshift.startTimeText = "Start: " + formatter.string(from: newshift.startTime!)
-            newshift.endTimeText = "End: " + formatter.string(from: newshift.endTime!)
-            
-            if tipsSwitch.isOn == true{
-                newshift.commission = "Tips/Commision: " + tipsField.text!
-            }
-            else{
-                newshift.commission = nil
-            }
+            newshift.startTimeText = formatter.string(from: newshift.startTime!)
+            newshift.endTimeText = formatter.string(from: newshift.endTime!)
             
         }
         else{
@@ -205,9 +206,9 @@ class HourEntryViewController: UIViewController, UITableViewDelegate, UITableVie
             let hours = calendar.component(.hour, from: newshift.duration!)
             let minutes = calendar.component(.minute, from: newshift.duration!)
             
-            newshift.dateText = "Date: " + formatter.string(from: newshift.date!)
+            newshift.dateText = formatter.string(from: newshift.date!)
             if allDay.isOn == true{
-                newshift.durationText = "Duration: All Day"
+                newshift.durationText = "All Day"
             }
             else{
                 var output: String = ""
@@ -226,12 +227,12 @@ class HourEntryViewController: UIViewController, UITableViewDelegate, UITableVie
                     output = output + String(minutes) + " minutes"
                 }
                 
-                newshift.durationText = "Duration: " + output
+                newshift.durationText = output
             }
         }
         
         if tipsSwitch.isOn == true{
-            newshift.commission = "Tips/Commision: " + tipsField.text!
+            newshift.commission = tipsField.text!
         }
         else{
             newshift.commission = nil
@@ -241,6 +242,7 @@ class HourEntryViewController: UIViewController, UITableViewDelegate, UITableVie
             shifts.append(newshift)
             tableView.reloadData()
             toggleSubmitButton()
+            dismissKeyboard()
             
             //clears last shifts data
             selectJobField.text = nil
@@ -249,6 +251,10 @@ class HourEntryViewController: UIViewController, UITableViewDelegate, UITableVie
             tipsField.text = nil
             tipsSwitch.isOn = false
             tipsField.isHidden = true
+            dateStartPicker.minimumDate = nil
+            dateEndPicker.minimumDate = nil
+            dateStartPicker.maximumDate = Date()
+            dateEndPicker.maximumDate = Date()
         }
     }
 
@@ -313,45 +319,42 @@ class HourEntryViewController: UIViewController, UITableViewDelegate, UITableVie
         switch hourEntrySelector.selectedSegmentIndex {
         case 0:
             dateStartPicker.datePickerMode = .dateAndTime
-            dateStartPicker.maximumDate = Date()
             dateStartPicker.addTarget(self, action: #selector(HourEntryViewController.collectDateStart(picker:)), for: UIControlEvents.valueChanged)
-            collectDateStart(picker: dateStartPicker)
             startTimeField.inputView = dateStartPicker
         case 1:
             dateStartPicker.datePickerMode = .date
-            collectDateDuration(picker: dateStartPicker)
+            //collectDateDuration(picker: dateStartPicker)
             dateStartPicker.addTarget(self, action: #selector(HourEntryViewController.collectDateDuration(picker:)), for: UIControlEvents.valueChanged)
-            dateStartPicker.maximumDate = Date()
             startTimeField.inputView = dateStartPicker
         default:
             break
         }
     }
-    
-    @IBAction func startFieldEndEditing(_ sender: Any) {
-        switch hourEntrySelector.selectedSegmentIndex {
-        case 0:
-        dateEndPicker.minimumDate = dateStartPicker.date
-        default:
-            break
-        }
-    }
-    
     
     @IBAction func endFieldEditing(_ sender: Any) {
         switch hourEntrySelector.selectedSegmentIndex {
         case 0:
             dateEndPicker.datePickerMode = .dateAndTime
             dateEndPicker.addTarget(self, action: #selector(HourEntryViewController.collectDateEnd(picker:)), for: UIControlEvents.valueChanged)
-            dateStartPicker.maximumDate = Date()
             endTimeField.inputView = dateEndPicker
         case 1:
             dateEndPicker.datePickerMode = .countDownTimer
             dateEndPicker.addTarget(self, action: #selector(HourEntryViewController.collectHours(picker:)), for: UIControlEvents.valueChanged)
-            dateStartPicker.maximumDate = Date()
             endTimeField.inputView = dateEndPicker
         default:
             break
+        }
+    }
+    
+    @IBAction func startFieldEnding(_ sender: Any) {
+        if hourEntrySelector.selectedSegmentIndex == 0{
+            dateEndPicker.minimumDate = dateStartPicker.date
+        }
+    }
+    
+    @IBAction func endFieldEnding(_ sender: Any) {
+        if hourEntrySelector.selectedSegmentIndex == 0{
+            dateStartPicker.maximumDate = dateEndPicker.date
         }
     }
     
@@ -401,7 +404,6 @@ class HourEntryViewController: UIViewController, UITableViewDelegate, UITableVie
         endTimeField.text = output
     }
     
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return shifts.count
     }
@@ -413,26 +415,25 @@ class HourEntryViewController: UIViewController, UITableViewDelegate, UITableVie
             fatalError("Cell could not be instantitated")
         }
         
-        cell.jobLabel.text = shifts[indexPath.row].jobTitle
+        cell.jobLabel.text = shifts[indexPath.row].job.jobName
         
         if shifts[indexPath.row].entryType == true{
-            cell.startLabel.text = shifts[indexPath.row].startTimeText
-            cell.endLabel.text = shifts[indexPath.row].endTimeText
+            cell.startLabel.text = "Start: " + shifts[indexPath.row].startTimeText!
+            cell.endLabel.text = "End: " + shifts[indexPath.row].endTimeText!
             if shifts[indexPath.row].commission != nil{
                 cell.tipsLabel.isHidden = false
-                cell.tipsLabel.text = shifts[indexPath.row].commission
+                cell.tipsLabel.text = "Tips/Commision: " + shifts[indexPath.row].commission!
             }
             else{
                 cell.tipsLabel.isHidden = true
             }
         }
         else{
-            cell.startLabel.text = shifts[indexPath.row].dateText
-            cell.endLabel.text = shifts[indexPath.row].durationText
-            
+            cell.startLabel.text = "Date: " + shifts[indexPath.row].dateText!
+            cell.endLabel.text = "Duration: " + shifts[indexPath.row].durationText!
             if shifts[indexPath.row].commission != nil{
                 cell.tipsLabel.isHidden = false
-                cell.tipsLabel.text = shifts[indexPath.row].commission
+                cell.tipsLabel.text = "Tips/Commision: " + shifts[indexPath.row].commission!
             }
             else{
                 cell.tipsLabel.isHidden = true
@@ -444,7 +445,44 @@ class HourEntryViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let editRowAction = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "Edit") { (action, indexpath) in
-            print("edit pressed")
+            let editableShift = self.shifts.remove(at: indexPath.row)
+            if editableShift.entryType == true{
+                self.startTimeField.text = editableShift.startTimeText
+                self.dateStartPicker.date = editableShift.startTime!
+                self.endTimeField.text = editableShift.endTimeText
+                self.dateEndPicker.date = editableShift.endTime!
+                if editableShift.commission != nil {
+                    self.tipsField.text = editableShift.commission
+                    self.tipsSwitch.isOn = true
+                    self.tipsField.isHidden = false
+                }
+                let jobNum = self.employee?.jobs!.index(of: editableShift.job)
+                self.jobPicker.selectRow(jobNum!, inComponent: 0, animated: false)
+                self.selectJobField.text = editableShift.job.jobName
+                tableView.deleteRows(at: [indexPath], with: .fade)
+                tableView.reloadData()
+                self.toggleSubmitButton()
+            }
+            else{
+                self.startTimeField.text = editableShift.dateText
+                self.dateStartPicker.date = editableShift.date!
+                if editableShift.durationText == "All Day"{
+                    self.allDay.isOn = true
+                    self.endTimeField.isHidden = true
+                }
+                else{
+                    self.allDay.isOn = false
+                    self.endTimeField.isHidden = false
+                    self.endTimeField.text = editableShift.durationText
+                    self.dateEndPicker.date = editableShift.date!
+                }
+                if editableShift.commission != nil {
+                    self.tipsField.text = editableShift.commission
+                    self.tipsSwitch.isOn = true
+                    self.tipsField.isHidden = false
+                }
+            }
+            
         }
         editRowAction.backgroundColor = UIColor.orange
         
@@ -496,6 +534,7 @@ class HourEntryViewController: UIViewController, UITableViewDelegate, UITableVie
         
         return noError
     }
+    
     
     func errorAlert(alertText: String){
         let errorPopup = UIAlertController(title: "Shift Error", message: alertText, preferredStyle: UIAlertControllerStyle.alert)

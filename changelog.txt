@@ -1,3 +1,14 @@
 3/5/2018
+Created Xcode Project
 
 3/26/2018
+Initial commit of iOS App to GitHub. Alignment and constraint issues fixed.
+
+4/6/2018
+UI improvements to login and hour entry. Empty functions set up for authentication and JSON parsing.
+
+4/21/2018
+Refined hour entry and install a cocoa pod for tips/commission field.
+
+4/23/2018
+Finished UI, added more restrictions to hour entry, and prepared to integrate app with middleware.

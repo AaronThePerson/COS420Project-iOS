@@ -9,18 +9,43 @@
 import UIKit
 
 class SendPayrollViewController: UIViewController {
-
+    
+    @IBOutlet weak var shiftWriteOut: UITextView!
+    
+    var shiftsToAdd: [Shift]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        showShifts()
         // Do any additional setup after loading the view.
-    }
-
-    @IBAction func declineButton(_ sender: Any) {
-        performSegue(withIdentifier: "editHours", sender: Any?.self)
     }
     
     @IBAction func acceptButton(_ sender: Any) {
-        performSegue(withIdentifier: "submittedHours", sender: Any?.self)
+        self.navigationController?.popToRootViewController(animated: true)
+        //performSegue(withIdentifier: "submittedHours", sender: Any?.self)
     }
+    
+    func showShifts(){
+        var outputText: String = "Shifts To Add \n"
+        
+        for i in 0..<shiftsToAdd!.count{
+            outputText.append("\nShift " + String(i+1))
+            outputText.append("\nJob: " + (shiftsToAdd?[i].job.jobName)!)
+            if shiftsToAdd?[i].entryType == true{
+                outputText.append("\nStart Time: " + (shiftsToAdd?[i].startTimeText)!)
+                outputText.append("\nEnd Time: " + (shiftsToAdd?[i].endTimeText)!)
+            }
+            else{
+                outputText.append("\nDate: " + (shiftsToAdd?[i].dateText)!)
+                outputText.append("\nDuration: " + (shiftsToAdd?[i].durationText)!)
+            }
+            if shiftsToAdd?[i].commission != nil{
+                outputText.append("\nTips/Comission: " + (shiftsToAdd?[i].commission)!)
+            }
+            outputText.append("\n")
+            
+        }
+        shiftWriteOut.text = outputText
+    }
+    
 }

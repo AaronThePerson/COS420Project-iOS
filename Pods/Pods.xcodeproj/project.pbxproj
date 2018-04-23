@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -55,49 +55,49 @@
 		2AF5769EFE1A2DEFFBF8406EDD31BAB2 /* TRFormatterHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TRFormatterHelper.m; path = Pod/Classes/TRFormatterHelper.m; sourceTree = "<group>"; };
 		2C8DA54D492E6C983385AD3D05619CBB /* Pods-Payrr-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Payrr-acknowledgements.markdown"; sourceTree = "<group>"; };
 		2DE8103A257F7CE4D36473707B28F486 /* Pods-Payrr-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Payrr-umbrella.h"; sourceTree = "<group>"; };
-		3271DA9261FE4FD909800F62A6764BFF /* Pods_PayrrUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PayrrUITests.framework; path = "Pods-PayrrUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3271DA9261FE4FD909800F62A6764BFF /* Pods_PayrrUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PayrrUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		33827D8BA75332C42CB05CAF2F1687F0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		39DBD09CC6473091C27D51B03FF11E88 /* TRCurrencyTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TRCurrencyTextField.framework; path = TRCurrencyTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39DBD09CC6473091C27D51B03FF11E88 /* TRCurrencyTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TRCurrencyTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46DC2C5920F91988C4664088A53FF0AD /* TRCurrencyTextField-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TRCurrencyTextField-umbrella.h"; sourceTree = "<group>"; };
 		4707B1B1CADE66E0DC384B01A907EE43 /* TRCurrencyTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TRCurrencyTextField.h; path = Pod/Classes/TRCurrencyTextField.h; sourceTree = "<group>"; };
 		4B1C56FED6802B9E99AA6DA7EE80C63F /* Pods-PayrrTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PayrrTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		4E394D83C5003D1D7A49914C1C25399C /* TRLocaleHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TRLocaleHelper.h; path = Pod/Classes/TRLocaleHelper.h; sourceTree = "<group>"; };
 		502E47A90CC44BD163A44EEA87FE0FC1 /* Pods-PayrrTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PayrrTests-resources.sh"; sourceTree = "<group>"; };
 		5AE6EEC069927994AE9A0E9FB811B0C2 /* Pods-PayrrTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PayrrTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5C31C2F5B1B9E3904204707EBF48184E /* Pods-PayrrTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-PayrrTests.modulemap"; sourceTree = "<group>"; };
+		5C31C2F5B1B9E3904204707EBF48184E /* Pods-PayrrTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PayrrTests.modulemap"; sourceTree = "<group>"; };
 		5D64E8558DAC74EC9F0EBC54DD74412C /* TRLocaleHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TRLocaleHelper.m; path = Pod/Classes/TRLocaleHelper.m; sourceTree = "<group>"; };
 		616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		684B91B3E16B6E78D28C493E2097ABDB /* TRCurrencyTextField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TRCurrencyTextField.m; path = Pod/Classes/TRCurrencyTextField.m; sourceTree = "<group>"; };
-		6967F040BE1E05D411C4223E24FBE164 /* Pods_Payrr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Payrr.framework; path = "Pods-Payrr.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6967F040BE1E05D411C4223E24FBE164 /* Pods_Payrr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Payrr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DB9BCB1F0B267458AB5ADFF5E13545F /* ResourceBundle-TRCurrencyTextField-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-TRCurrencyTextField-Info.plist"; sourceTree = "<group>"; };
 		6F80B64543ADD3F879030EF0E77F345A /* Pods-PayrrTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PayrrTests-umbrella.h"; sourceTree = "<group>"; };
 		732AD48D627FBE90278C1316C9A42CF7 /* TRCurrencyTextField-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TRCurrencyTextField-prefix.pch"; sourceTree = "<group>"; };
 		75B2A86CB665CACFD26ECC1054C2DDD5 /* Pods-Payrr-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Payrr-frameworks.sh"; sourceTree = "<group>"; };
-		7AE6C9D92FEE6FB9849CE703E91D3288 /* TRCurrencyTextField.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = TRCurrencyTextField.bundle; path = TRCurrencyTextField.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AE6C9D92FEE6FB9849CE703E91D3288 /* TRCurrencyTextField.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TRCurrencyTextField.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EA24D775646D362C425BAB713E67832 /* Pods-PayrrUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PayrrUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7EB4FFB75E1443A83EC70762C1887C82 /* Pods-PayrrUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PayrrUITests-frameworks.sh"; sourceTree = "<group>"; };
 		7EC994CDC2D681BA26389F78A7E4B325 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		7F973D9F7B00E496A9256AE794B2C584 /* Pods-Payrr-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Payrr-dummy.m"; sourceTree = "<group>"; };
 		810709EC4E75A6F10F144FC62F522B23 /* Pods-PayrrUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PayrrUITests-resources.sh"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9EA2FA2CD4817844F2C6E49E4EC98BCB /* Pods-PayrrUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-PayrrUITests.modulemap"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9EA2FA2CD4817844F2C6E49E4EC98BCB /* Pods-PayrrUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PayrrUITests.modulemap"; sourceTree = "<group>"; };
 		9F2B1F5CBA05A795994595E830D8540D /* Pods-PayrrUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PayrrUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A073C377C04756E5BBA01D6F538D1DB8 /* Pods-PayrrUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PayrrUITests-umbrella.h"; sourceTree = "<group>"; };
 		A4BA0F7E9887D0567E530D0BEC8DCA2B /* Pods-PayrrUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PayrrUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		BA6FECCB423262EAE2AB835A11E0A28E /* Pods-PayrrTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PayrrTests-frameworks.sh"; sourceTree = "<group>"; };
 		C06018B83A3B5AA12E391F556B7DE9F1 /* Pods-Payrr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Payrr.debug.xcconfig"; sourceTree = "<group>"; };
 		CBE14A05EA8E96E0502ADB176804C384 /* Pods-PayrrTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PayrrTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		CE4F21B0E3C8FB78437C7C08E66B56F6 /* Pods_PayrrTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PayrrTests.framework; path = "Pods-PayrrTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE4F21B0E3C8FB78437C7C08E66B56F6 /* Pods_PayrrTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PayrrTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFD92D5AB9CF2B74486752F560CC35DD /* Pods-Payrr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Payrr.release.xcconfig"; sourceTree = "<group>"; };
 		D4335C5880C817D6F64745E4A22DD556 /* Pods-PayrrTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PayrrTests.release.xcconfig"; sourceTree = "<group>"; };
 		D639A3030D0202FC6083E8201138F5FF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E5C660669A5A0B6C2179BE138561DCB7 /* Pods-Payrr.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Payrr.modulemap"; sourceTree = "<group>"; };
+		E5C660669A5A0B6C2179BE138561DCB7 /* Pods-Payrr.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Payrr.modulemap"; sourceTree = "<group>"; };
 		EACB56DAB580197833FEBA1FAC8B17D6 /* TRFormatterHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TRFormatterHelper.h; path = Pod/Classes/TRFormatterHelper.h; sourceTree = "<group>"; };
 		EB3C9817E332E809233028A025E226DD /* Pods-PayrrUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PayrrUITests-dummy.m"; sourceTree = "<group>"; };
 		F5A800458EF37B0DB3127B25F99BF243 /* Pods-PayrrUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PayrrUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		F6D5E6915BED7F91CA5DFCF44FC87B06 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE04E1FE4D2308C39FA6B86AF9A52051 /* Pods-Payrr-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Payrr-resources.sh"; sourceTree = "<group>"; };
-		FFCD0D248DACDB728F5FE1E6B562BAE6 /* TRCurrencyTextField.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = TRCurrencyTextField.modulemap; sourceTree = "<group>"; };
+		FFCD0D248DACDB728F5FE1E6B562BAE6 /* TRCurrencyTextField.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = TRCurrencyTextField.modulemap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,7 +193,6 @@
 				5D64E8558DAC74EC9F0EBC54DD74412C /* TRLocaleHelper.m */,
 				A41D1F3FB356DC881EFF823134EA71FC /* Support Files */,
 			);
-			name = TRCurrencyTextField;
 			path = TRCurrencyTextField;
 			sourceTree = "<group>";
 		};
@@ -422,7 +421,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0930;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -708,19 +707,31 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_RELEASE=1",
 					"$(inherited)",
@@ -782,20 +793,32 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_DEBUG=1",

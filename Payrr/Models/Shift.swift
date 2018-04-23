@@ -9,7 +9,7 @@
 import Foundation
 
 class Shift: NSObject{
-    var jobTitle: String
+    var job: Job
     var entryType: Bool
     var startTime: Date?
     var endTime: Date?
@@ -22,8 +22,8 @@ class Shift: NSObject{
     var dateText: String?
     var durationText: String?
     
-    init(jobTitle: String, entryType: Bool) {
-        self.jobTitle = jobTitle
+    init(job: Job, entryType: Bool) {
+        self.job = job
         self.entryType = entryType
     }
     
