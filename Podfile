@@ -8,6 +8,7 @@ target 'Payrr' do
   # Pods for Payrr
 
 pod 'TRCurrencyTextField'
+pod 'Alamofire'
 
   target 'PayrrTests' do
     inherit! :search_paths

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "41C4688DADDBB6727F2FFE5C1FAF5B5B"
+               BlueprintIdentifier = "82BC8C59ABE263BA681C37D8220C9BBD"
                BuildableName = "Pods_Payrr.framework"
                BlueprintName = "Pods-Payrr"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "41C4688DADDBB6727F2FFE5C1FAF5B5B"
+            BlueprintIdentifier = "82BC8C59ABE263BA681C37D8220C9BBD"
             BuildableName = "Pods_Payrr.framework"
             BlueprintName = "Pods-Payrr"
             ReferencedContainer = "container:Pods.xcodeproj">

@@ -8,6 +8,7 @@
 
 import UIKit
 import Foundation
+import Alamofire
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
@@ -17,47 +18,36 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
     
+    let authURL: URL = URL(string: "https://umcos420gp.com/server/public/authenticate")!
+    var token: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    func attemptLogin(){
-        
+    func attemptLogin(username: String, password: String, completion:@escaping (_ success: Bool) -> ()){
+        //overwrite user input from text fields with test account
         let parameters = ["username": "SlartyBartfish", "password": "Swordfish"]
         
-        guard let url = URL(string: "https://localhost/server/public/authenticate") else{
-            return
-        }
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.httpShouldHandleCookies = true
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        guard let httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: []) else{
-            return
-        }
-        request.httpBody = httpBody
-        print(request.httpBody)
+        //use user input from textfields
+        //let parameters = ["username": username, "password": password]
         
-        let session = URLSession.shared
-        session.dataTask(with: request) { (data, response, error) in
-            if let response = response{
-                print(response)
+        Alamofire.request(authURL, method: HTTPMethod.post, parameters: parameters, encoding: JSONEncoding.default, headers: nil).responseJSON { (response) in
+            
+            if response.response?.statusCode == 200{
+                let dictionary = response.result.value as! [String: AnyObject]
+                
+                self.token = (dictionary["token"] as? String)!
+                completion(true)
+            }
+            else if response.response?.statusCode == 401{
+                completion(false)
             }
             
-            if let data = data{
-                do{
-                    let json = try JSONSerialization.jsonObject(with: data, options: [])
-                    print(json)
-                } catch{
-                    print(error)
-                }
-            }
-        }.resume()
-        
+        }
         
     }
-    
     
     func prepareUI(){
         self.navigationController?.setNavigationBarHidden(true, animated: false)
@@ -78,10 +68,26 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToEmployees"{
+            let nav = segue.destination as! UINavigationController
+            let vc = nav.topViewController as! EmployeesTableViewController
+            vc.token = token
+        }
+    }
+    
     @IBAction func signIn(_ sender: Any) {
-        // add login case
-        attemptLogin()
-        performSegue(withIdentifier: "goToEmployees", sender: Any?.self)
+        attemptLogin(username: Email.text!, password: Password.text!, completion: { (success) in
+            if success{
+                self.performSegue(withIdentifier: "goToEmployees", sender: Any?.self)
+            }
+            else{
+                let errorPopup = UIAlertController(title: "Login Failed", message: "Incorrect Username or Password", preferredStyle: UIAlertControllerStyle.alert)
+                errorPopup.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil))
+                self.present(errorPopup, animated: true, completion: nil)
+            }
+        })
+        
     }
     
 }

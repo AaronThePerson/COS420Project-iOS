@@ -12,3 +12,6 @@ Refined hour entry and install a cocoa pod for tips/commission field.
 
 4/23/2018
 Finished UI, added more restrictions to hour entry, and prepared to integrate app with middleware.
+
+4/25/2018
+Authentication finally implemented. JSON response with employee and token management also added. 

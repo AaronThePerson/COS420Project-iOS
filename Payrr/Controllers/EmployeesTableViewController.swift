@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import Foundation
+import Alamofire
 
 class EmployeesTableViewController: UITableViewController{
+    
+    var token: String?
     
     var employees = [Employee]()
     var selectedEmployee = Employee(name: "test", id: "test", jobs: [Job(jobName: "test", commision: false)!])
@@ -17,6 +21,9 @@ class EmployeesTableViewController: UITableViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getEmployees { (employeesJSON) in
+            self.buildEmployees(employeesJSON: employeesJSON)
+        }
         loadSampleEmployees()
         
     }
@@ -100,4 +107,35 @@ class EmployeesTableViewController: UITableViewController{
         performSegue(withIdentifier: "goToHours", sender: self)
     }
     
+    func getEmployees(completion: @escaping (_ serverResponse: DataResponse<Any>)->Void){
+        
+        let employeesURL: URL = URL(string: "https://umcos420gp.com/server/public/employees")!
+        let authHeaders = ["Authorization": "Bearer " + token!] as HTTPHeaders
+        Alamofire.request(employeesURL, method: HTTPMethod.get, parameters: nil, encoding: JSONEncoding.default, headers: authHeaders).responseJSON { (response) in
+            if response.response?.statusCode == 200{
+                
+                print(response)
+                
+                completion(response)
+            }
+        }
+    }
+    
+    func buildEmployees(employeesJSON: DataResponse<Any>){
+        struct EmployeeInfo: Decodable {
+            let id: String
+            let firstname: String
+            let middlename: String
+            let lastname: String
+            
+            enum CodingKeys: String, CodingKey{
+                case id = "employee_id"
+                case firstname
+                case middlename
+                case lastname
+            }
+        }
+        
+        
+    }
 }

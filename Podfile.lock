@@ -1,12 +1,15 @@
 PODS:
+  - Alamofire (4.6.0)
   - TRCurrencyTextField (0.1.1)
 
 DEPENDENCIES:
+  - Alamofire
   - TRCurrencyTextField
 
 SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   TRCurrencyTextField: a942d5bd9cffc3fcf0fa2661e712adc1404df97b
 
-PODFILE CHECKSUM: a01a20a666814bfd8573c4974c7b4495e0751a5c
+PODFILE CHECKSUM: 9315c4ff8cd81ee30d38833dea68abb3680bd490
 
 COCOAPODS: 1.2.0
