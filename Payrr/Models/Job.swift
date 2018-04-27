@@ -10,10 +10,10 @@ import Foundation
 
 class Job: NSObject{
     var jobName: String
-    var commision: Bool
+    var jobID: String
     
-    init?(jobName: String, commision: Bool) {
+    init(jobName: String, jobID: String) {
         self.jobName = jobName
-        self.commision = commision
+        self.jobID = jobID
     }
 }

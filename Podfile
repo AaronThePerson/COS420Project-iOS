@@ -9,6 +9,8 @@ target 'Payrr' do
 
 pod 'TRCurrencyTextField'
 pod 'Alamofire'
+pod 'SwiftyJSON', '~> 4.0.0'
+pod 'Alamofire-SwiftyJSON', '~> 3.0'
 
   target 'PayrrTests' do
     inherit! :search_paths

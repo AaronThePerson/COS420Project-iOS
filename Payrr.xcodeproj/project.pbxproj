@@ -669,6 +669,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E494DCB7F90F4681377D3140 /* Pods-Payrr.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UBWPYUEANY;
@@ -686,6 +687,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 08C33A45D32BCBFD8346B217 /* Pods-Payrr.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UBWPYUEANY;

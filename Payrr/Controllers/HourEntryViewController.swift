@@ -24,8 +24,8 @@ class HourEntryViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var addShiftButton: UIButton!
     @IBOutlet weak var tipsField: TRCurrencyTextField!
     
-    var employee = Employee(name: "test", id: "test", jobs: [Job(jobName: "test", commision: false)!])
-    var selectedJob = Job(jobName: "test", commision: true)
+    var employee: Employee?
+    var selectedJob: Job?
     var shifts = [Shift]()
     let dateStartPicker = UIDatePicker()
     let dateEndPicker = UIDatePicker()

@@ -15,7 +15,12 @@ class Employee: NSObject{
     var id: String?
     var jobs: [Job]?
     
-    init?(name: String, id: String, jobs: [Job]) {
+    init(name: String, id: String) {
+        self.name = name
+        self.id = id
+    }
+    
+    init(name: String, id: String, jobs: [Job]) {
         self.name = name
         self.id = id
         self.jobs = jobs
