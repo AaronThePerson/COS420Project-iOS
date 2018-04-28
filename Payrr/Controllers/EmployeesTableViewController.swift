@@ -21,20 +21,17 @@ class EmployeesTableViewController: UITableViewController{
     var myIndex = 0
     var jobs = [Job]()
     
-    var employeesCollected: Bool = false
-    var jobsCollected: Bool = false
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         getEmployees { (employeesJSON) in
             self.buildEmployees(employeesJSON: employeesJSON)
-            self.employeesCollected = true
-            self.employeesHaveJobs()
-        }
-        getJobs { (jobsJSON) in
-            self.buildJobs(jobsJSON: jobsJSON)
-            self.jobsCollected = true
-            self.employeesHaveJobs()
+            for i in 0..<self.employees.count{
+                self.getJobs(employee: self.employees[i], completion: { (jobsJSON) in
+                    let someJobs = self.buildJobs(jobsJSON: jobsJSON)
+                    self.employees[i].jobs = someJobs
+                })
+            }
+            self.tableView.reloadData()
         }
     }
     
@@ -42,6 +39,7 @@ class EmployeesTableViewController: UITableViewController{
         if (segue.identifier == "goToHours"){
             let hourEntryController = segue.destination as! HourEntryViewController
             hourEntryController.employee = self.selectedEmployee
+            hourEntryController.token = self.token
         }
     }
     
@@ -65,15 +63,12 @@ class EmployeesTableViewController: UITableViewController{
         cell.employeeID.text = "ID: " + employee.id!
         cell.employeeName.text = employee.name
         
-        // Configure the cell...
-        
         return cell
     }
     @IBAction func logout(_ sender: Any) {
         let loginScreen = storyboard?.instantiateInitialViewController()
         self.present(loginScreen!, animated: true) {
         }
-        //performSegue(withIdentifier: "logout", sender: Any.self)
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -86,7 +81,6 @@ class EmployeesTableViewController: UITableViewController{
         let authHeaders = ["Authorization": "Bearer " + token!] as HTTPHeaders
         Alamofire.request(employeesURL, method: HTTPMethod.get, parameters: nil, encoding: JSONEncoding.default, headers: authHeaders).responseSwiftyJSON { (response) in
             if response.response?.statusCode == 200{
-                //print(response)
                 completion(response)
             }
         }
@@ -104,6 +98,8 @@ class EmployeesTableViewController: UITableViewController{
             let middleName: String = (dict?["middlename"]!.stringValue)!
             let lastName: String = (dict?["lastname"]!.stringValue)!
             
+            let employerEmployeeID: String = (dict?["employer_employee_ID"]!.stringValue)!
+            
             let employeeID: String = (dict?["employee_id"]!.stringValue)!
             var name: String = ""
             
@@ -114,13 +110,14 @@ class EmployeesTableViewController: UITableViewController{
                 name = firstName + " " + lastName
             }
             
-            let someEmployee = Employee(name: name, id: employeeID)
+            let someEmployee = Employee(name: name, id: employeeID, employerEmployeeID: employerEmployeeID)
             employees.append(someEmployee)
         }
     }
     
-    func getJobs(completion: @escaping (_ serverResponse: DataResponse<JSON>)->Void){
-        let employeesURL: URL = URL(string: "https://umcos420gp.com/server/public/jobs")!
+    func getJobs(employee: Employee, completion: @escaping (_ serverResponse: DataResponse<JSON>)->Void){
+        let employeeURLString: String = "https://umcos420gp.com/server/public/employee/" + employee.employerEmployeeID! + "/jobs"
+        let employeesURL: URL = URL(string: employeeURLString)!
         let authHeaders = ["Authorization": "Bearer " + token!] as HTTPHeaders
         Alamofire.request(employeesURL, method: HTTPMethod.get, parameters: nil, encoding: JSONEncoding.default, headers: authHeaders).responseSwiftyJSON { (response) in
             if response.response?.statusCode == 200{
@@ -129,7 +126,8 @@ class EmployeesTableViewController: UITableViewController{
         }
     }
     
-    func buildJobs(jobsJSON: DataResponse<JSON>){
+    func buildJobs(jobsJSON: DataResponse<JSON>)->[Job]{
+        var employeeJobs: [Job] = []
         let jobsData = JSON(jobsJSON.result.value!)
         let jobsArray = jobsData.array
         let num: Int = (jobsArray?.count)!
@@ -141,17 +139,9 @@ class EmployeesTableViewController: UITableViewController{
             let jobID: String = (dict?["job_id"]!.stringValue)!
             
             let someJob = Job(jobName: jobName, jobID: jobID)
-            jobs.append(someJob)
+            employeeJobs.append(someJob)
         }
-    }
-    
-    func employeesHaveJobs(){
-        if employeesCollected && jobsCollected{
-            for i in 0..<employees.count{
-                employees[i].jobs = jobs
-            }
-            tableView.reloadData()
-        }
+        return employeeJobs
     }
     
 }

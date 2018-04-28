@@ -24,6 +24,8 @@ class HourEntryViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var addShiftButton: UIButton!
     @IBOutlet weak var tipsField: TRCurrencyTextField!
     
+    var token: String?
+    
     var employee: Employee?
     var selectedJob: Job?
     var shifts = [Shift]()
@@ -114,6 +116,7 @@ class HourEntryViewController: UIViewController, UITableViewDelegate, UITableVie
         if segue.identifier == "goToReview"{
             let sendPayrollController = segue.destination as! SendPayrollViewController
             sendPayrollController.shiftsToAdd = shifts
+            sendPayrollController.token = self.token
         }
     }
     
@@ -174,88 +177,90 @@ class HourEntryViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     @IBAction func addShiftButton(_ sender: Any) {
-        
-        var entryType: Bool = true
-        if hourEntrySelector.selectedSegmentIndex == 1{
-            entryType = false
-        }
-        
-        let newshift = Shift(job: selectedJob!, entryType: entryType)
-        
-        if entryType{
-            newshift.startTime = dateStartPicker.date
-            newshift.endTime = dateEndPicker.date
+        if errorCheck(){
+            var entryType: Bool = true
+            if hourEntrySelector.selectedSegmentIndex == 1{
+                entryType = false
+            }
             
-            let formatter = DateFormatter()
-            formatter.dateStyle = DateFormatter.Style.medium
-            formatter.timeStyle = DateFormatter.Style.short
+            let newshift = Shift(job: selectedJob!, entryType: entryType, employeeID: (employee?.id)!)
             
-            newshift.startTimeText = formatter.string(from: newshift.startTime!)
-            newshift.endTimeText = formatter.string(from: newshift.endTime!)
-            
-        }
-        else{
-            newshift.date = dateStartPicker.date
-            newshift.duration = dateEndPicker.date
-            
-            let formatter = DateFormatter()
-            formatter.dateStyle = DateFormatter.Style.medium
-            
-            let calendar = Calendar.current
-            
-            let hours = calendar.component(.hour, from: newshift.duration!)
-            let minutes = calendar.component(.minute, from: newshift.duration!)
-            
-            newshift.dateText = formatter.string(from: newshift.date!)
-            if allDay.isOn == true{
-                newshift.durationText = "All Day"
+            if entryType{
+                newshift.startTime = dateStartPicker.date
+                newshift.endTime = dateEndPicker.date
+                
+                let formatter = DateFormatter()
+                formatter.dateStyle = DateFormatter.Style.medium
+                formatter.timeStyle = DateFormatter.Style.short
+                
+                newshift.startTimeText = formatter.string(from: newshift.startTime!)
+                newshift.endTimeText = formatter.string(from: newshift.endTime!)
+                
             }
             else{
-                var output: String = ""
+                newshift.date = dateStartPicker.date
+                newshift.duration = dateEndPicker.date
                 
-                if hours == 1{
-                    output = output + String(hours) + " hour "
-                }
-                else if hours > 1{
-                    output = output + String(hours) + " hours "
-                }
+                let formatter = DateFormatter()
+                formatter.dateStyle = DateFormatter.Style.medium
                 
-                if minutes == 1{
-                    output = output + String(minutes) + " minute"
-                }
-                else if minutes > 1{
-                    output = output + String(minutes) + " minutes"
-                }
+                let calendar = Calendar.current
                 
-                newshift.durationText = output
+                let hours = calendar.component(.hour, from: newshift.duration!)
+                let minutes = calendar.component(.minute, from: newshift.duration!)
+                
+                newshift.dateText = formatter.string(from: newshift.date!)
+                if allDay.isOn == true{
+                    newshift.durationText = "All Day"
+                }
+                else{
+                    var output: String = ""
+                    
+                    if hours == 1{
+                        output = output + String(hours) + " hour "
+                    }
+                    else if hours > 1{
+                        output = output + String(hours) + " hours "
+                    }
+                    
+                    if minutes == 1{
+                        output = output + String(minutes) + " minute"
+                    }
+                    else if minutes > 1{
+                        output = output + String(minutes) + " minutes"
+                    }
+                    
+                    newshift.durationText = output
+                }
+            }
+            
+            if tipsSwitch.isOn == true{
+                newshift.commission = tipsField.text!
+            }
+            else{
+                newshift.commission = nil
+            }
+            
+            if errorCheck() == true{
+                shifts.append(newshift)
+                tableView.reloadData()
+                toggleSubmitButton()
+                dismissKeyboard()
+                
+                //clears last shifts data
+                selectJobField.text = nil
+                startTimeField.text = nil
+                endTimeField.text = nil
+                tipsField.text = nil
+                tipsSwitch.isOn = false
+                tipsField.isHidden = true
+                dateStartPicker.minimumDate = nil
+                dateEndPicker.minimumDate = nil
+                dateStartPicker.maximumDate = Date()
+                dateEndPicker.maximumDate = Date()
             }
         }
         
-        if tipsSwitch.isOn == true{
-            newshift.commission = tipsField.text!
-        }
-        else{
-            newshift.commission = nil
-        }
-        
-        if errorCheck() == true{
-            shifts.append(newshift)
-            tableView.reloadData()
-            toggleSubmitButton()
-            dismissKeyboard()
-            
-            //clears last shifts data
-            selectJobField.text = nil
-            startTimeField.text = nil
-            endTimeField.text = nil
-            tipsField.text = nil
-            tipsSwitch.isOn = false
-            tipsField.isHidden = true
-            dateStartPicker.minimumDate = nil
-            dateEndPicker.minimumDate = nil
-            dateStartPicker.maximumDate = Date()
-            dateEndPicker.maximumDate = Date()
-        }
     }
 
     @IBAction func selectChange(_ sender: UISegmentedControl) {
@@ -296,12 +301,14 @@ class HourEntryViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBAction func allDaySwitched(_ sender: Any) {
         if allDay.isOn == true{
             endTimeField.isHidden = true
+            dateEndPicker.datePickerMode = .dateAndTime
+            dateEndPicker.addTarget(self, action: #selector(HourEntryViewController.collectDateEnd(picker:)), for: UIControlEvents.valueChanged)
         }
         else if allDay.isOn == false{
             endTimeField.isHidden = false
+            dateEndPicker.datePickerMode = .countDownTimer
+            dateEndPicker.addTarget(self, action: #selector(HourEntryViewController.collectHours(picker:)), for: UIControlEvents.valueChanged)
         }
-        dateEndPicker.datePickerMode = .dateAndTime
-        dateEndPicker.addTarget(self, action: #selector(HourEntryViewController.collectDateEnd(picker:)), for: UIControlEvents.valueChanged)
         endTimeField.inputView = dateEndPicker
     }
     
@@ -459,9 +466,6 @@ class HourEntryViewController: UIViewController, UITableViewDelegate, UITableVie
                 let jobNum = self.employee?.jobs!.index(of: editableShift.job)
                 self.jobPicker.selectRow(jobNum!, inComponent: 0, animated: false)
                 self.selectJobField.text = editableShift.job.jobName
-                tableView.deleteRows(at: [indexPath], with: .fade)
-                tableView.reloadData()
-                self.toggleSubmitButton()
             }
             else{
                 self.startTimeField.text = editableShift.dateText
@@ -482,7 +486,9 @@ class HourEntryViewController: UIViewController, UITableViewDelegate, UITableVie
                     self.tipsField.isHidden = false
                 }
             }
-            
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            tableView.reloadData()
+            self.toggleSubmitButton()
         }
         editRowAction.backgroundColor = UIColor.orange
         
@@ -531,10 +537,8 @@ class HourEntryViewController: UIViewController, UITableViewDelegate, UITableVie
             noError = false
             errorAlert(alertText: "Start and end times are the same.")
         }
-        
         return noError
     }
-    
     
     func errorAlert(alertText: String){
         let errorPopup = UIAlertController(title: "Shift Error", message: alertText, preferredStyle: UIAlertControllerStyle.alert)

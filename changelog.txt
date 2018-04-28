@@ -18,3 +18,6 @@ Authentication finally implemented. JSON response with employee and token manage
 
 4/26/2018
 JSON parsing for employee table into data models.
+
+4/28/2018
+Minimum Viable Product!

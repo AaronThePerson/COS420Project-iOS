@@ -13,7 +13,6 @@ class EmployeeTableViewCell: UITableViewCell {
     @IBOutlet weak var employeeName: UILabel!
     @IBOutlet weak var employeeID: UILabel!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
